@@ -1,0 +1,149 @@
+.article1 {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.article1-title p:nth-child(1) {
+  font-family: Raleway-Regular;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 50px;
+  letter-spacing: 0px;
+  color: #262b2e;
+}
+
+.article1-title p:nth-child(2) {
+  font-family: OpenSans;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 15px;
+  letter-spacing: 0px;
+  color: #262b2e;
+  opacity: 0.7;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  width: 469px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li {
+  height: 20px;
+  font-family: OpenSans-Bold;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 13px;
+  letter-spacing: 0px;
+  color: #262b2e;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  border-bottom: 2px solid #262b2e;
+}
+
+nav ul li.active {
+  border-bottom: 2px solid #262b2e;
+}
+
+/* ==== */
+.article2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article2-box {
+  width: 560px;
+  height: 288px;
+  background: #fff;
+}
+
+.article2-box:first-child {
+  padding: 10px;
+}
+
+td button {
+  width: 65px;
+  height: 30px;
+  background-color: #5dd054;
+  border-radius: 2px;
+  color: #fff;
+  border: none;
+}
+.handle-head {
+  height: 109px;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.list {
+  width: 100%;
+}
+.list > table {
+  width: 100%;
+}
+thead tr {
+  height: 66px;
+}
+th,
+td {
+  text-align: center;
+  font-size: 12px;
+  color: #262b2e;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.square {
+  width: 95px;
+  height: 40px;
+  border-radius: 2px;
+  border: solid 2px #ccc;
+  background-color: #fff;
+  color: #ccc;
+}
+
+/* === */
+.article3 {
+  background: #fff;
+  height: 349px;
+}
+
+#diagram {
+  height: 100%;
+}
+
+/* === */
+.article4 {
+  height: 377px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.article4-box {
+  width: 560px;
+  background: #fff;
+}
+
+#pie {
+  height: 100%;
+}
+
+#bar {
+  height: 100%;
+}

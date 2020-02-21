@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+img {
+  border: 0;
+}
+
+header {
+  background: #ffffff;
+}
+
+main {
+  background: #f5f8f9;
+  padding: 53px 0;
+}
+
+footer {
+  background: #202124;
+}
+
+.box {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+article {
+  margin-bottom: 20px;
+}

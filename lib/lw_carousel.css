@@ -1,0 +1,58 @@
+.lwCarousel img {
+  display: block;
+}
+.lwCarousel {
+  position: relative;
+  overflow: hidden;
+}
+.lwCarousel ul {
+  position: absolute;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.lwCarousel .horizontal li {
+  float: left;
+}
+
+.lwCarousel .nextBtn{
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.lwCarousel .prevBtn{
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
+.lwCarousel .page {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12PX;
+}
+
+.lwCarousel .page span {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 5px;
+  width: 15px;
+  height: 15px;
+  background-color: #bfc2c4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.lwCarousel .page span.active {
+  background-color: #ffffff;
+  height: 20px;
+}
