@@ -16,6 +16,7 @@ $(()=>{
         img : ['./img/img1.png','./img/img2.png','./img/img3.png','./img/img4.png','./img/img5.png']
     })
 
+    // 轮播图右边的内容
     const tableData = {
         thead:['TIME','USERNAME','STATUS'],
         tbody:[
@@ -38,20 +39,59 @@ $(()=>{
         const diagram = echarts.init(document.querySelector('#diagram'))
         const option = {
             title: {
-                text: '曲线图数据展示'
+                text: '曲线图数据展示',
+                left: 'center',
+                textStyle:{
+                    fontFamily: 'STHeitiSC-Medium',
+                    fontSize: 20,
+                    fontWeight: 'normal',
+                    color: '#262b2e',
+                }
             },
+            color: ['#4586ef'],
             tooltip: {},
             xAxis: {
                 type: 'category',
                 axisTick: {
-                    alignWithLabel: true
+                    alignWithLabel: true,
+                    show: false
+                },
+                axisLine: {
+                    lineStyle: {
+                        width: 0.5,
+                        color: '#cbcbcb',
+                        type:'dashed'
+                    }
+                },
+                axisLabel: {
+                    margin: 10,
+                    textStyle: {
+                        color: '#4e4c4c'  
+                    }
                 },
                 data: data.xAxis
             },
-            yAxis: {},
+            yAxis: {
+                axisLine: {show:false},
+                axisTick: {show:false},
+                splitLine: {
+                    lineStyle: {
+                        width: 0.5,
+                        color: '#cbcbcb',
+                        type:'dashed'
+                    }
+                },
+                axisLabel: {
+                    formatter: '{value} 人'
+                }
+            },
             series: [{
                 type: 'line',
                 smooth: true,
+                itemStyle : { normal: {label : {show: true } } },
+                areaStyle: {
+                    color: 'rgba(183, 208, 248,.5)'
+                },
                 data: data.series
             }]
         }
@@ -65,10 +105,22 @@ $(()=>{
        const bar = echarts.init(document.querySelector('#bar'))
        const pieOpt = {
             title: {
-                text: '饼状图数据展示'
+                text: '饼状图数据展示',
+                left: 'center',
+                textStyle:{
+                    fontFamily: 'STHeitiSC-Medium',
+                    fontSize: 20,
+                    fontWeight: 'normal',
+                    color: '#262b2e',
+                }
             },
             series: [{
                 type: 'pie',
+                radius : '70%',
+                center: ['50%', '55%'],
+                label:{
+                   fontSize:10
+                },
                 data: data.series.map((item,idx)=>({
                     name:data.xAxis[idx],
                     value:item
@@ -77,18 +129,48 @@ $(()=>{
        }
        const barOpt = {
             title: {
-                text: '柱状图数据展示'
+                text: '柱状图数据展示',
+                left: 'center',
+                textStyle:{
+                    fontFamily: 'STHeitiSC-Medium',
+                    fontSize: 20,
+                    fontWeight: 'normal',
+                    color: '#262b2e',
+                }
             },
             color: ['#3398DB'],
+            barWidth: 14,
             xAxis: {
                 type: 'category',
                 axisTick: {
-                    alignWithLabel: true
+                    show:false
+                },
+                axisLine: {
+                    lineStyle: {
+                        width: 0.5,
+                        color: '#cbcbcb',
+                        type:'dashed'
+                    }
+                },
+                axisLabel: {
+                    margin: 13,
+                    textStyle: {
+                        color: '#4e4c4c'  
+                    }
                 },
                 data: data.xAxis
             },
             yAxis: {
-                name: '商品数'
+                name: '商品数',
+                axisLine: {show:false},
+                axisTick: {show:false},
+                splitLine: {
+                    lineStyle: {
+                        width: 0.5,
+                        color: '#cbcbcb',
+                        type:'dashed'
+                    }
+                },
             },
             series: [{
                 type: 'bar',

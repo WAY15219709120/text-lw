@@ -126,6 +126,7 @@ td {
 
 #diagram {
   height: 100%;
+  padding: 33px 36px 0;
 }
 
 /* === */
@@ -142,8 +143,10 @@ td {
 
 #pie {
   height: 100%;
+  padding: 47px 0 0;
 }
 
 #bar {
   height: 100%;
+  padding: 47px 0 0 50px;
 }
